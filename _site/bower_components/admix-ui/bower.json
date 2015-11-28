@@ -1,0 +1,11 @@
+{
+  "name": "admix-ui",
+  "version": "0.1.0",
+  "main": [
+    "build/**/*.{js|css|scss}"
+  ],
+  "ignore": [
+    ".*"
+  ],
+  "appPath": "app"
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>formvalid组件</title>
+
+    <script>g_start = new Date();</script>
+
+    <script src="//g-assets.daily.taobao.net/o2o/admix/0.1.0/admix-zepto.js?v=20151101" crossorigin></script>
+    <link href="//g-assets.daily.taobao.net/o2o/admix/0.1.0/admix.css?v=20151101" rel="stylesheet">
+
+    <!-- 配置模块 -->
+    <script>
+    var debug = true;
+    seajs.config({base: 'http://localhost:9000/'});
+    </script>
+
+</head>
+
+<body>
+
+<form class="input-group">
+    <div class="input-row full-width">
+        <input id="name" type="text" data-rule="require" data-msg="标题必须填写" placeholder="填写标题（最多15个字）">
+    </div>
+    <div class="input-row auto-height">
+        <textarea id="description" type="text" data-rule="require" data-msg="描述必须填写" placeholder="填写描述（描述活动说明、规则或要求，最多1000字）"></textarea>
+    </div>
+    <div class="input-row full-width">
+        <input id="price1" type="number" data-rule="require" data-min="1" data-max="10" data-msg="价格填写不正确" placeholder="价格1-10">
+    </div>
+    <div class="input-row full-width">
+        <input id="price2" type="number" data-rule="require" data-compare=">|price1" data-msg="价格填写不正确" placeholder="价格1-10">
+    </div>
+</form>
+
+<nav class="bar bar-tab">
+    <div class="bar-inner">
+        <a id="save" href="javascript:;" class="btn btn-primary btn-block" style="margin: 0 10px;top:0.4rem;width:auto;">
+            提交
+        </a>
+    </div>
+</nav>
+
+<!-- 加载脚本 -->
+<script>g_mstart = new Date();seajs.use('pages/formvalid');</script>
+</body>
+</html>

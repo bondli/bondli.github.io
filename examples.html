@@ -8,18 +8,408 @@ title: JS组件--admix
   <div class="container">
     <div class="docs-sub-content">
       <h2 class="page-title">JS组件</h2>
-      <p class="page-description">很多使用例子告诉你这么调用组件.</p>
+      <p class="page-description">该页面请切换到手机模式下查看</p>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="column-group">
-    <div class="column lg-units-8 docs-examples docs-content">
 
+<div class="container">
+  <!-- Components -->
+  <div class="docs-components column-group">
+    <div class="device-column column lg-units-5 pull-right">
+      <!-- In phone examples -->
+      <div class="device js-device">
+        <div class="device-content" style="background:#eee;">
+          <div id="iwindow">
+            <header class="bar">
+              <a class="icon icon-left-nav pull-left menu-show-right"></a>
+              <a class="icon icon-right-nav pull-right menu-show-left"></a>
+              <h1 class="title">Title</h1>
+            </header>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="column lg-units-4">
+    <div class="column lg-units-7 docs-content">
+      <!-- panelmenu -->
+      <article class="component active" id="panelmenu">
+        <h3 class="component-title">滑出菜单</h3>
+        <p class="component-description">支持左侧滑出和右侧滑出.</p>
+
+        <div class="component-example component-example-fullbleed">
+          <header class="bar">
+            <a class="icon icon-left-nav pull-left menu-show-right"></a>
+            <a class="icon icon-right-nav pull-right menu-show-left"></a>
+            <h1 class="title">Title</h1>
+          </header>
+        </div>
+
+{% highlight html %}
+<header class="bar">
+  <a class="icon icon-left-nav pull-left menu-show-right"></a>
+  <a class="icon icon-right-nav pull-right menu-show-left"></a>
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
+
+      </article>
+
+      <!-- actionsheet -->
+      <article class="component" id="actionsheet">
+        <h3 class="component-title">底部菜单</h3>
+        <p class="component-description">常用于删除前的提示</p>
+
+        <div class="component-example component-example-fullbleed">
+          <ul class="table-view">
+            <li class="table-view-cell media">
+              <a class="no-navigate-right">
+                <img class="media-object pull-left" src="http://placehold.it/60x60">
+                <div class="media-body">
+                  <div class="item-title">Item 1</div>
+                  <div class="item-subtitle">2015.10.23 - 2015.12.31</div>
+                </div>
+              </a>
+            </li>
+            <li class="table-view-cell actions">
+              <a class="control-item actionsheet-show" href="javascript:;" _val="118195" _type="1">删除</a>
+            </li>
+          </ul>
+        </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell media">
+    <a class="no-navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/60x60">
+      <div class="media-body">
+        <div class="item-title">Item 1</div>
+        <div class="item-subtitle">2015.10.23 - 2015.12.31</div>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell actions">
+    <a class="control-item actionsheet-show" href="javascript:;" _val="118195" _type="1">删除</a>
+  </li>
+</ul>
+{% endhighlight %}
+
+      </article>
+
+      <!-- calendar -->
+      <article class="component" id="topnav">
+        <h3 class="component-title">日期选择器</h3>
+        <p class="component-description">可以支持三种类型：日期，时间，日期+时间</p>
+
+        <div class="component-example component-example-fullbleed">
+          <form class="input-group">
+            <div class="input-row">
+              <label>Birth date</label>
+              <input type="text" readonly="readonly" placeholder="Birth day" id="date" value="2014-04-30">
+            </div>
+            <div class="input-row">
+              <label>Birth date</label>
+              <input type="text" readonly="readonly" placeholder="Birth day" id="datetime" value="2014-04-30 10:30">
+            </div>
+            <div class="input-row">
+              <label>Birth time</label>
+              <input type="text" readonly="readonly" placeholder="Birth time" id="time" value="10:30">
+            </div>
+          </form>
+        </div>
+
+{% highlight html %}
+<form class="input-group">
+  <div class="input-row">
+    <label>Birth date</label>
+    <input type="text" readonly="readonly" placeholder="Birth day" id="date" value="2014-04-30">
+  </div>
+  <div class="input-row">
+    <label>Birth date</label>
+    <input type="text" readonly="readonly" placeholder="Birth day" id="datetime" value="2014-04-30 10:30">
+  </div>
+  <div class="input-row">
+    <label>Birth time</label>
+    <input type="text" readonly="readonly" placeholder="Birth time" id="time" value="10:30">
+  </div>
+</form>
+{% endhighlight %}
+
+      </article>
+
+      <!--dialog-->
+      <article class="component" id="dialog">
+        <h3 class="component-title">遮罩框</h3>
+        <p class="component-description">常用于中奖提示和错误警告</p>
+
+        <div class="component-example component-example-fullbleed">
+          <ul class="table-view">
+            <li class="table-view-cell media">
+              <a class="no-navigate-right">
+                <img class="media-object pull-left" src="http://placehold.it/60x60">
+                <div class="media-body">
+                  <div class="item-title">Item 1</div>
+                  <div class="item-subtitle">2015.10.23 - 2015.12.31</div>
+                </div>
+              </a>
+            </li>
+            <li class="table-view-cell actions">
+              <a class="control-item dialog-alert" href="javascript:;" _val="118195" _type="1">下架</a>
+              <a class="control-item dialog-confirm" href="javascript:;" _val="118195" _type="1">删除</a>
+            </li>
+          </ul>
+        </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell media">
+    <a class="no-navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/60x60">
+      <div class="media-body">
+        <div class="item-title">Item 1</div>
+        <div class="item-subtitle">2015.10.23 - 2015.12.31</div>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell actions">
+    <a class="control-item dialog-alert" href="javascript:;" _val="118195" _type="1">下架</a>
+    <a class="control-item dialog-confirm" href="javascript:;" _val="118195" _type="1">删除</a>
+  </li>
+</ul>
+{% endhighlight %}
+      </article>
+
+      <!--downloadbar-->
+      <article class="component" id="downloadbar">
+        <h3 class="component-title">下载条</h3>
+        <p class="component-description">除了下载条之外，可以改成一个通用的底部广告位</p>
+
+        <div class="component-example component-example-fullbleed">
+          <div class="content-padded">
+            <a class="btn show-downloadbar">显示下载条</a>
+            <a class="btn hide-downloadbar">隐藏下载条</a>
+          </div>
+        </div>
+
+{% highlight html %}
+<div class="content-padded">
+  <a class="btn show-downloadbar">显示下载条</a>
+  <a class="btn hide-downloadbar">隐藏下载条</a>
+</div>
+{% endhighlight %}
+      </article>
+
+      <!--formvalid-->
+      <article class="component" id="formvalid">
+        <h3 class="component-title">表单验证</h3>
+        <p class="component-description">可以支持的验证类型类型：require, maxlength,email,number,min,max等等</p>
+
+        <div class="component-example component-example-fullbleed">
+          <form class="input-group">
+            <div class="input-row full-width">
+              <input id="name" type="text" data-rule="require" data-msg="标题必须填写" placeholder="填写标题（最多15个字）">
+            </div>
+            <div class="input-row auto-height">
+              <textarea id="description" type="text" data-rule="require" data-msg="描述必须填写" placeholder="填写描述（描述活动说明、规则或要求，最多1000字）"></textarea>
+            </div>
+            <div class="input-row full-width">
+              <input id="price1" type="number" data-rule="require" data-min="1" data-max="10" data-msg="价格填写不正确" placeholder="价格1-10">
+            </div>
+          </form>
+          <a id="save-formvalid" href="javascript:;" class="btn btn-primary btn-block" style="margin:10px;width:auto;">提交</a>
+        </div>
+
+{% highlight html %}
+<form class="input-group">
+  <div class="input-row full-width">
+    <input id="name" type="text" data-rule="require" data-msg="标题必须填写" placeholder="填写标题（最多15个字）">
+  </div>
+  <div class="input-row auto-height">
+    <textarea id="description" type="text" data-rule="require" data-msg="描述必须填写" placeholder="填写描述（描述活动说明、规则或要求，最多1000字）"></textarea>
+  </div>
+  <div class="input-row full-width">
+    <input id="price1" type="number" data-rule="require" data-min="1" data-max="10" data-msg="价格填写不正确" placeholder="价格1-10">
+  </div>
+</form>
+<a id="save-formvalid" href="javascript:;" class="btn btn-primary btn-block">提交</a>
+{% endhighlight %}
+      </article>
+
+      <!--request-->
+      <article class="component" id="request">
+        <h3 class="component-title">异步请求</h3>
+        <p class="component-description">可以支持类型：ajax, jsonp</p>
+
+        <div class="component-example component-example-fullbleed">
+          <div class="content-padded">
+            <a href="javascript:;" id="send-jsonp" class="btn">发送jsonp请求</a>
+            <a href="javascript:;" id="send-ajax" class="btn">发送ajax请求</a>
+          </div>
+        </div>
+
+{% highlight html %}
+<div class="content-padded">
+  <a href="javascript:;" id="send-jsonp" class="btn">发送jsonp请求</a>
+  <a href="javascript:;" id="send-ajax" class="btn">发送ajax请求</a>
+</div>
+{% endhighlight %}
+      </article>
+
+      <!--loading-->
+      <article class="component" id="loading">
+        <h3 class="component-title">加载器</h3>
+        <p class="component-description">可以支持类型：全局加载器，标签加载器</p>
+
+        <div class="component-example component-example-fullbleed">
+          <div class="content-padded">
+            <a href="javascript:;" id="show-loading1" class="btn">显示全局加载</a>
+            <a href="javascript:;" id="show-loading2" class="btn">显示标签加载</a>
+          </div>
+          <div id="loading" style="width:100%;height:40px;text-align:center;position:fixed;left:0;bottom:0;">
+          </div>
+        </div>
+
+{% highlight html %}
+<div class="content-padded">
+  <a href="javascript:;" id="show-loading1" class="btn">显示全局加载</a>
+  <a href="javascript:;" id="show-loading2" class="btn">显示标签加载</a>
+</div>
+{% endhighlight %}
+      </article>
+
+      <!--nodata-->
+      <article class="component" id="nodata">
+        <h3 class="component-title">无数据提示框</h3>
+        <p class="component-description">可以小改成出错提示，404页面等</p>
+
+        <div class="component-example component-example-fullbleed">
+          <div class="content-padded">
+            <a class="btn show-nodata">显示无数据提示</a>
+            <a class="btn hide-nodata">隐藏无数据提示</a>
+          </div>
+        </div>
+
+{% highlight html %}
+<div class="content-padded">
+  <a class="btn show-nodata">显示无数据提示</a>
+  <a class="btn hide-nodata">隐藏无数据提示</a>
+</div>
+{% endhighlight %}
+      </article>
+
+
+      <!--photopreview-->
+      <article class="component" id="photopreview">
+        <h3 class="component-title">相册预览</h3>
+        <p class="component-description">可以支持直接预览和缩略后点击预览</p>
+
+        <div class="component-example component-example-fullbleed">
+          <div id="photo-preview" class="content-padded clearfix"></div>
+          <div class="content-padded" style="margin-top: 60px">
+            <a href="javascript:;" class="btn" id="photo-add">加图片</a>
+            <a href="javascript:;" class="btn" id="photo-show">仅显示预览模式</a>
+          </div>
+        </div>
+
+{% highlight html %}
+<div id="photo-preview" class="content-padded clearfix"></div>
+<div class="content-padded" style="margin-top: 60px">
+  <a href="javascript:;" class="btn" id="photo-add">加图片</a>
+  <a href="javascript:;" class="btn" id="photo-show">仅显示预览模式</a>
+</div>
+{% endhighlight %}
+      </article>
+
+      <!--picker-->
+      <article class="component" id="picker">
+        <h3 class="component-title">单选下拉组件</h3>
+        <p class="component-description">用于替换默认的select标签</p>
+
+        <div class="component-example component-example-fullbleed">
+          <form class="input-group">
+            <div class="input-row">
+              <label>请选择</label>
+              <input type="text" readonly="readonly" placeholder="Your iOS device" id="picker-device" value="iphone6">
+            </div>
+          </form>
+        </div>
+
+{% highlight html %}
+<form class="input-group">
+  <div class="input-row">
+    <label>请选择</label>
+    <input type="text" readonly="readonly" placeholder="Your iOS device" id="picker-device" value="iphone6">
+  </div>
+</form>
+{% endhighlight %}
+      </article>
+
+
+      <!--tips-->
+      <article class="component" id="tips">
+        <h3 class="component-title">信息提示器</h3>
+        <p class="component-description">可以支持三种类型：成功信息，失败信息，警告信息</p>
+
+        <div class="component-example component-example-fullbleed">
+          <div class="content-padded">
+            <a class="btn" id="show-tipsOk">显示成功tips</a>
+            <a class="btn" id="show-tipsWarn">显示警告tips</a>
+            <a class="btn" id="show-tipsErr">显示失败tips</a>
+          </div>
+        </div>
+
+{% highlight html %}
+<div class="content-padded">
+  <a class="btn" id="show-tipsOk">显示成功tips</a>
+  <a class="btn" id="show-tipsWarn">显示警告tips</a>
+  <a class="btn" id="show-tipsErr">显示失败tips</a>
+</div>
+{% endhighlight %}
+      </article>
+
+
+      <!--searchbar-->
+      <article class="component" id="searchbar">
+        <h3 class="component-title">搜索框</h3>
+        <p class="component-description">可以支持已有dom的事件绑定和JS构建dom两种方式</p>
+
+        <div class="component-example component-example-fullbleed">
+          <div id="search-bar"></div>
+          <div class="content-padded" style="margin-top: 60px">
+            <a href="javascript:;" class="btn" id="show-searchbar">显示searchbar</a>
+            <a href="javascript:;" class="btn" id="hide-searchbar">隐藏searchbar</a>
+          </div>
+        </div>
+
+{% highlight html %}
+<div id="search-bar"></div>
+<div class="content-padded" style="margin-top: 60px">
+  <a href="javascript:;" class="btn" id="show-searchbar">显示searchbar</a>
+  <a href="javascript:;" class="btn" id="hide-searchbar">隐藏searchbar</a>
+</div>
+{% endhighlight %}
+      </article>
+
+      <!--toast-->
+      <article class="component" id="toast">
+        <h3 class="component-title">toast</h3>
+        <p class="component-description">常用于前端错误信息提示</p>
+
+        <div class="component-example component-example-fullbleed">
+          <div class="content-padded">
+            <a class="btn" id="show-toast">显示toast</a>
+          </div>
+        </div>
+
+{% highlight html %}
+<div class="content-padded">
+  <a class="btn" id="show-toast">显示toast</a>
+</div>
+{% endhighlight %}
+      </article>
+
+
     </div>
   </div>
 
@@ -28,3 +418,9 @@ title: JS组件--admix
     {% include footer.html %}
   </div>
 </div>
+
+<script src="//g.alicdn.com/o2o/admix/0.1.0/admix-outer.js?v=20151101" crossorigin></script>
+<script>
+  seajs.config({base: '/'});
+  seajs.use('assets/example');
+</script>

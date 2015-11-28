@@ -2091,3 +2091,91 @@ hr {
 .browser-support-no {
   background-color: #f44;
 }
+
+
+
+/* line 1, photopreview.scss */
+.photo, .new-photo {
+  border: 1px solid #dddddd;
+  text-align: center;
+  vertical-align: middle;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  margin-right: 10px;
+  color: #ddd;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+/* line 14, photopreview.scss */
+.photo .first, .new-photo .first {
+  background: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  width: 100%;
+  height: 16px;
+  line-height: 16px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 12px;
+  text-align: center;
+}
+/* line 27, photopreview.scss */
+.photo img, .new-photo img {
+  vertical-align: middle;
+}
+
+/* line 32, photopreview.scss */
+.new-photo {
+  border: 1px dashed #dddddd;
+  margin-right: 0px;
+}
+/* line 36, photopreview.scss */
+.new-photo.icon-plus {
+  font-size: 32px;
+}
+
+/* line 41, photopreview.scss */
+.modal-preview {
+  background: #000;
+}
+/* line 44, photopreview.scss */
+.modal-preview .bar-tab .tab-item {
+  color: #333;
+}
+/* line 46, photopreview.scss */
+.modal-preview .bar-tab .tab-item.disabled {
+  color: #929292;
+}
+
+/* line 52, photopreview.scss */
+.preview-slider {
+  width: 100%;
+  text-align: center;
+  margin: 3rem auto 0;
+  overflow: hidden;
+}
+/* line 58, photopreview.scss */
+.preview-slider .slider-inner {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  -webkit-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+/* line 73, photopreview.scss */
+.preview-slider .slider-inner img {
+  width: 100%;
+  height: auto;
+  float: left;
+  display: inline;
+}
+

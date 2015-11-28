@@ -1,0 +1,8 @@
+{
+  "name": "admix-blog",
+  "version": "0.0.0",
+  "dependencies": {
+    "admix-ui": "git@gitlab.alibaba-inc.com:hongbang.lhb/admix-ui.git#daily/0.1.0"
+  },
+  "appPath": "."
+}

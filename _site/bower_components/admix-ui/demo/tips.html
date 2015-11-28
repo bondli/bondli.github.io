@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>tips组件</title>
+
+    <script>g_start = new Date();</script>
+
+    <script src="//g-assets.daily.taobao.net/o2o/admix/0.1.0/admix-zepto.js?v=20151101" crossorigin></script>
+    <link href="//g-assets.daily.taobao.net/o2o/admix/0.1.0/admix.css?v=20151101" rel="stylesheet">
+
+    <!-- 配置模块 -->
+    <script>
+    var debug = true;
+    seajs.config({base: 'http://localhost:9000/'});
+    </script>
+
+</head>
+
+<body>
+
+<div class="content-padded">
+    <a class="btn" id="showOk">显示成功tips</a>
+    <a class="btn" id="showWarn">显示警告tips</a>
+    <a class="btn" id="showErr">显示失败tips</a>
+</div>
+
+<!-- 加载脚本 -->
+<script>g_mstart = new Date();seajs.use('pages/tips');</script>
+</body>
+</html>

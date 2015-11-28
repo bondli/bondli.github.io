@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>scrape组件</title>
+
+    <script>g_start = new Date();</script>
+
+    <script src="//g-assets.daily.taobao.net/o2o/admix/0.1.0/admix-zepto.js?v=20151101" crossorigin></script>
+    <link href="//g-assets.daily.taobao.net/o2o/admix/0.1.0/admix.css?v=20151101" rel="stylesheet">
+
+    <!-- 配置模块 -->
+    <script>
+    var debug = true;
+    seajs.config({base: 'http://localhost:9000/'});
+    </script>
+
+    <style>
+    body {
+        background-color: #90150d;
+    }
+    .scrape-wrap {
+        position: relative;
+        height: 15.375rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(//gw.alicdn.com/tps/i4/T1H.OEFBFaXXbIzVMs-640-615.png_Q75.jpg);
+    }
+    .scrape-box {
+        position: absolute;
+        top: 46.5%;
+        bottom: 5%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 82%;
+        overflow: hidden;
+        text-align: center;
+    }
+    .scrape-button {
+        margin: 22% auto 0;
+        background: #cc1a1a;
+        font-size: 20px;
+        color: #fff;
+        width: 50%;
+        line-height: 2rem;
+        text-align: center;
+        border: 0;
+        border-radius: 3px;
+    }
+    .scrape-button.disabled {
+        background: #ccc;
+    }
+    .scrape-prize-area {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        text-align: center;
+        color: #fff;
+    }
+    </style>
+
+</head>
+
+<body>
+
+<div class="scrape-wrap">
+    <div class="scrape-box" id="mycard"></div>
+</div>
+
+<!-- 加载脚本 -->
+<script>g_mstart = new Date();seajs.use('pages/scrape');</script>
+</body>
+</html>
