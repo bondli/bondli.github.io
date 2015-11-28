@@ -1,0 +1,1037 @@
+---
+layout: default
+title: css组件--admix
+---
+
+<div class="docs-sub-header">
+  {% include masthead.html %}
+  <div class="container">
+    <div class="docs-sub-content">
+      <h2 class="page-title">CSS组件</h2>
+      <p class="page-description">复制这些代码到你页面中即可实现你当前看到的效果.</p>
+    </div>
+  </div>
+  {% include toolbar.html %}
+</div>
+
+<div class="container">
+  <!-- Components -->
+  <div class="docs-components column-group">
+    <div class="device-column column lg-units-5 pull-right">
+      <!-- In phone examples -->
+      <div class="device js-device">
+        <div class="device-content">
+          <div id="iwindow">
+            <header class="bar bar-nav">
+              <h1 class="title">Title</h1>
+            </header>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column lg-units-7 docs-content">
+      <!-- Bars -->
+      <article class="component active" id="bars">
+        <h3 class="component-title">头部标题栏</h3>
+        <p class="component-description">全屏宽度的头部标题栏.</p>
+
+        <div class="component-example component-example-fullbleed">
+          <header class="bar bar-nav">
+            <h1 class="title">Title</h1>
+          </header>
+        </div>
+
+{% highlight html %}
+<header class="bar bar-nav">
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
+
+    </article>
+
+    <!-- topnav -->
+    <article class="component" id="topnav">
+      <h3 class="component-title">头部固定导航</h3>
+      <p class="component-description">常用于列表页面切换状态查询数据</p>
+
+      <div class="component-example component-example-fullbleed">
+        <header class="bar bar-nav">
+          <div class="bar-inner">
+            <a class="nav-item active" href="#">Label</a>
+            <a class="nav-item" href="#">Label</a>
+            <a class="nav-item" href="#">Label</a>
+          </div>
+        </header>
+      </div>
+
+{% highlight html %}
+<header class="bar bar-nav">
+  <div class="bar-inner">
+    <a class="nav-item active" href="#">Label</a>
+    <a class="nav-item" href="#">Label</a>
+    <a class="nav-item" href="#">Label</a>
+  </div>
+</header>
+{% endhighlight %}
+
+    </article>
+
+    <!-- nav-group -->
+    <article class="component" id="nav-group">
+      <h3 class="component-title">分组导航栏</h3>
+      <p class="component-description">N个导航成一组，会自动均分100%的宽度.</p>
+
+      <div class="component-example component-example-fullbleed">
+        <div class="segmented-control" style="margin:10px;">
+          <a class="control-item active">One</a>
+          <a class="control-item">Two</a>
+          <a class="control-item">Three</a>
+        </div>
+      </div>
+
+{% highlight html %}
+<div class="segmented-control content-padded">
+  <a class="control-item active">One</a>
+  <a class="control-item">Two</a>
+  <a class="control-item">Three</a>
+</div>
+{% endhighlight %}
+
+    </article>
+
+    <!-- tab-bar -->
+    <article class="component" id="tab-bar">
+      <h3 class="component-title">底部导航</h3>
+      <p class="component-description">N个导航链接，会自动均分100%的宽度.</p>
+
+      <div class="component-example component-example-fullbleed">
+        <nav class="bar bar-tab">
+          <div class="bar-inner">
+            <a class="tab-item active" href="#">
+              <span class="icon icon-home"></span>
+              <span class="tab-label">Home</span>
+            </a>
+            <a class="tab-item" href="#">
+              <span class="icon icon-person"></span>
+              <span class="tab-label">Profile</span>
+            </a>
+            <a class="tab-item" href="#">
+              <span class="icon icon-star-filled"></span>
+              <span class="tab-label">Favorites</span>
+            </a>
+            <a class="tab-item" href="#">
+              <span class="icon icon-search"></span>
+              <span class="tab-label">Search</span>
+            </a>
+            <a class="tab-item" href="#">
+              <span class="icon icon-gear"></span>
+              <span class="tab-label">Settings</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+
+{% highlight html %}
+<nav class="bar bar-tab">
+  <div class="bar-inner">
+    <a class="tab-item active" href="#">
+      <span class="icon icon-home"></span>
+      <span class="tab-label">Home</span>
+    </a>
+    <a class="tab-item" href="#">
+      <span class="icon icon-person"></span>
+      <span class="tab-label">Profile</span>
+    </a>
+    <a class="tab-item" href="#">
+      <span class="icon icon-star-filled"></span>
+      <span class="tab-label">Favorites</span>
+    </a>
+    <a class="tab-item" href="#">
+      <span class="icon icon-search"></span>
+      <span class="tab-label">Search</span>
+    </a>
+    <a class="tab-item" href="#">
+      <span class="icon icon-gear"></span>
+      <span class="tab-label">Settings</span>
+    </a>
+  </div>
+</nav>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+      <h3 class="component-title">底部导航 (labels only)</h3>
+      <p class="component-description">N个导航链接，会自动均分100%的宽度.</p>
+
+      <div class="component-example component-example-fullbleed">
+        <nav class="bar bar-tab">
+          <div class="bar-inner">
+            <a class="tab-item active" href="#">
+              Label
+            </a>
+            <a class="tab-item" href="#">
+              Label
+            </a>
+            <a class="tab-item" href="#">
+              Label
+            </a>
+          </div>
+        </nav>
+      </div>
+
+{% highlight html %}
+<nav class="bar bar-tab">
+  <div class="bar-inner">
+    <a class="tab-item active" href="#">
+      Label
+    </a>
+    <a class="tab-item" href="#">
+      Label
+    </a>
+    <a class="tab-item" href="#">
+      Label
+    </a>
+  </div>
+</nav>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Typography -->
+  <article class="component" id="typography">
+    <h3 class="component-title">排版</h3>
+    <p class="component-description">Use headings and paragraphs to title and describe sections of your app. Apply or wrap elements with <code>.content-padded</code> to give the content space around the screen.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <div class="content-padded">
+        <h1>h1. Heading</h1>
+        <h2>h2. Heading</h2>
+        <h3>h3. Heading</h3>
+        <h4>h4. Heading</h4>
+        <h5>h5. Heading</h5>
+        <h6>h6. Heading</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco.</p>
+      </div>
+    </div>
+
+{% highlight html %}
+<div class="content-padded">
+  <h1>h1. Heading</h1>
+  <h2>h2. Heading</h2>
+  <h3>h3. Heading</h3>
+  <h4>h4. Heading</h4>
+  <h5>h5. Heading</h5>
+  <h6>h6. Heading</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco.</p>
+</div>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Table views -->
+  <article class="component" id="table-views">
+    <h3 class="component-title">表格数据</h3>
+    <p class="component-description">Table views can be used for organizing data, showing collections of links, or a series of controls.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li class="table-view-cell">Item 1</li>
+        <li class="table-view-cell">Item 2</li>
+        <li class="table-view-cell">Item 3</li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">Item 1</li>
+  <li class="table-view-cell">Item 2</li>
+  <li class="table-view-cell">Item 3</li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">带右箭头的表格数据</h3>
+    <p class="component-description">Chevrons should be used to indicate that the item is linked. Just apply the classes <code>.navigate-right</code> or <code>.navigate-left</code> to use a chevron.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li class="table-view-cell">
+          <a class="navigate-right">
+            Item 1
+          </a>
+        </li>
+        <li class="table-view-cell">
+          <a class="navigate-right">
+            Item 2
+          </a>
+        </li>
+        <li class="table-view-cell">
+          <a class="navigate-right">
+            Item 3
+          </a>
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">
+    <a class="navigate-right">
+      Item 1
+    </a>
+  </li>
+  <li class="table-view-cell">
+    <a class="navigate-right">
+      Item 2
+    </a>
+  </li>
+  <li class="table-view-cell">
+    <a class="navigate-right">
+      Item 3
+    </a>
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">带图标的表格数据</h3>
+    <p class="component-description">Badges are a great way of showing data.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li class="table-view-cell">Item 1 <span class="badge">4</span></li>
+        <li class="table-view-cell">Item 2 <span class="badge">1</span></li>
+        <li class="table-view-cell">Item 3 <span class="badge">5</span></li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">Item 1 <span class="badge">4</span></li>
+  <li class="table-view-cell">Item 2 <span class="badge">1</span></li>
+  <li class="table-view-cell">Item 3 <span class="badge">5</span></li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">带箭头和图标的表格数据</h3>
+    <p class="component-description">Feel free to use chevrons and badges together. They'll automatically positon themselves correctly.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li class="table-view-cell">
+          <a class="navigate-right">
+            <span class="badge">5</span>
+            Item 1
+          </a>
+        </li>
+        <li class="table-view-cell">
+          <a class="navigate-right">
+            <span class="badge">5</span>
+            Item 2
+          </a>
+        </li>
+        <li class="table-view-cell">
+          <a class="navigate-right">
+            <span class="badge">5</span>
+            Item 3
+          </a>
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">
+    <a class="navigate-right">
+      <span class="badge">5</span>
+      Item 1
+    </a>
+  </li>
+  <li class="table-view-cell">
+    <a class="navigate-right">
+      <span class="badge">5</span>
+      Item 2
+    </a>
+  </li>
+  <li class="table-view-cell">
+    <a class="navigate-right">
+      <span class="badge">5</span>
+      Item 3
+    </a>
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">带图片的表格数据</h3>
+    <p class="component-description">Showing media inside table views is easy. This component to perfect for images and text.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li class="table-view-cell media">
+          <a class="navigate-right">
+            <img class="media-object pull-left" src="http://placehold.it/42x42">
+            <div class="media-body">
+              <div class="item-title">Item 1</div>
+              <div class="item-subtitle">sdasdasdasd</div>
+              <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right">
+            <img class="media-object pull-left" src="http://placehold.it/42x42">
+            <div class="media-body">
+              <div class="item-title">Item 2</div>
+              <div class="item-subtitle">sdasdasdasdasdasdasd asdasdasdasdasdasdads</div>
+              <p class="item-text">Lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right">
+            <img class="media-object pull-left" src="http://placehold.it/42x42">
+            <div class="media-body">
+              <div class="item-title">Item 3 dssdfsdf sdfsdf dsfsdfsdffsdf asdasdasdasdasd</div>
+              <div class="item-subtitle">sdasdasdasd</div>
+              <p class="item-text">Lorem ipsum dolor sit amet, </p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        <div class="item-title">Item 1</div>
+        <div class="item-subtitle">sdasdasdasd</div>
+        <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        <div class="item-title">Item 2</div>
+        <div class="item-subtitle">sdasdasdasdasdasdasd asdasdasdasdasdasdads</div>
+        <p class="item-text">Lorem ipsum dolor sit amet, consectetur</p>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        <div class="item-title">Item 3 dssdfsdf sdfsdf dsfsdfsdffsdf asdasdasdasdasd</div>
+        <div class="item-subtitle">sdasdasdasd</div>
+        <p class="item-text">Lorem ipsum dolor sit amet, </p>
+      </div>
+    </a>
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">左侧带图标的表格数据</h3>
+    <p class="component-description">Ratchicons can also used instead of images.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li class="table-view-cell media">
+          <a class="navigate-right">
+            <span class="media-object pull-left icon icon-trash"></span>
+            <div class="media-body">
+              Item 1
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right">
+            <span class="media-object pull-left icon icon-gear"></span>
+            <div class="media-body">
+              Item 2
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell media">
+          <a class="navigate-right">
+            <span class="media-object pull-left icon icon-pages"></span>
+            <div class="media-body">
+              Item 3
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <span class="media-object pull-left icon icon-trash"></span>
+      <div class="media-body">
+        Item 1
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <span class="media-object pull-left icon icon-gear"></span>
+      <div class="media-body">
+        Item 2
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <span class="media-object pull-left icon icon-pages"></span>
+      <div class="media-body">
+        Item 3
+      </div>
+    </a>
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">带按钮的表格数据</h3>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li class="table-view-cell">Item 1 <button class="btn">Button</button></li>
+        <li class="table-view-cell">Item 2 <button class="btn btn-primary">Button</button></li>
+        <li class="table-view-cell">Item 3 <button class="btn btn-positive">Button</button></li>
+        <li class="table-view-cell">Item 4 <button class="btn btn-negative">Button</button></li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">Item 1 <button class="btn">Button</button></li>
+  <li class="table-view-cell">Item 2 <button class="btn btn-primary">Button</button></li>
+  <li class="table-view-cell">Item 3 <button class="btn btn-positive">Button</button></li>
+  <li class="table-view-cell">Item 4 <button class="btn btn-negative">Button</button></li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">多行数据表格</h3>
+    <p class="component-description">带有操作项的数据列表</p>
+
+    <div class="component-example">
+      <ul class="table-view">
+        <li class="table-view-cell media">
+          <a class="no-navigate-right">
+            <img class="media-object pull-left" src="http://placehold.it/42x42">
+            <div class="media-body">
+              <div class="item-title">Item 1</div>
+              <div class="item-subtitle">2015.10.23 - 2015.12.31</div>
+            </div>
+          </a>
+        </li>
+        <li class="table-view-cell actions">
+          <a class="control-item" href="javascript:;" _val="118195" _type="1">复制</a>
+          <a class="control-item" href="javascript:;" _val="118195" _type="1">删除</a>
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell media">
+    <a class="no-navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        <div class="item-title">Item 1</div>
+        <div class="item-subtitle">2015.10.23 - 2015.12.31</div>
+      </div>
+    </a>
+  </li>
+  <li class="table-view-cell actions">
+    <a class="control-item" href="javascript:;" _val="118195" _type="1">复制</a>
+    <a class="control-item" href="javascript:;" _val="118195" _type="1">删除</a>
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component" id="card">
+    <h3 class="component-title">卡片</h3>
+    <p class="component-description">Use <code>.card</code> to wrap any content in a padded element.</p>
+
+    <div class="component-example">
+      <div class="card">
+        <div class="card-header">Card header</div>
+        <div class="card-content">
+          <div class="card-content-inner">Card with header and footer. Card header is used to display card title and footer for some additional information or for custom actions.</div>
+        </div>
+        <div class="card-footer">Card Footer</div>
+      </div>
+    </div>
+
+{% highlight html %}
+<div class="card">
+  <div class="card-header">Card header</div>
+  <div class="card-content">
+    <div class="card-content-inner">Card with header and footer. Card header is used to display card title and footer for some additional information or for custom actions.</div>
+  </div>
+  <div class="card-footer">Card Footer</div>
+</div>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component" id="block">
+    <h3 class="component-title">纯数据展示</h3>
+    <p class="component-description">Use <code>.block</code> to wrap any content in a padded element.</p>
+
+    <div class="component-example">
+      <div class="block">
+        <div class="block-cell head">title</div>
+        <div class="block-cell">2015.10.11-2015.12.13</div>
+        <div class="block-cell">content content content content content content content</div>
+      </div>
+    </div>
+
+{% highlight html %}
+<div class="block">
+  <div class="block-cell head">title</div>
+  <div class="block-cell">2015.10.11-2015.12.13</div>
+  <div class="block-cell">content content content content content content content</div>
+</div>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Buttons -->
+  <article class="component" id="buttons">
+    <h3 class="component-title">按钮</h3>
+    <p class="component-description">Buttons come in many flavors and should be used for user actions.</p>
+
+    <div class="component-example">
+      <button class="btn">Button</button>
+      <button class="btn btn-primary">Button</button>
+      <button class="btn btn-positive">Button</button>
+      <button class="btn btn-negative">Button</button>
+      <button class="btn btn-link">Button</button>
+
+      <button class="btn btn-outlined">Button</button>
+      <button class="btn btn-primary btn-outlined">Button</button>
+      <button class="btn btn-positive btn-outlined">Button</button>
+      <button class="btn btn-negative btn-outlined">Button</button>
+    </div>
+
+{% highlight html %}
+<button class="btn">Button</button>
+<button class="btn btn-primary">Button</button>
+<button class="btn btn-positive">Button</button>
+<button class="btn btn-negative">Button</button>
+<button class="btn btn-link">Button</button>
+
+<button class="btn btn-outlined">Button</button>
+<button class="btn btn-primary btn-outlined">Button</button>
+<button class="btn btn-positive btn-outlined">Button</button>
+<button class="btn btn-negative btn-outlined">Button</button>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Buttons -->
+  <article class="component" id="buttonsWithIcons">
+    <h3 class="component-title">带图标的按钮</h3>
+    <p class="component-description">Ratchicons work inside buttons too.</p>
+
+    <div class="component-example">
+      <button class="btn">
+        <span class="icon icon-search"></span>
+        Button
+      </button>
+      <button class="btn btn-primary">
+        <span class="icon icon-search"></span>
+        Button
+      </button>
+      <button class="btn btn-positive">
+        <span class="icon icon-search"></span>
+        Button
+      </button>
+      <button class="btn btn-negative">
+        <span class="icon icon-search"></span>
+        Button
+      </button>
+      <button class="btn btn-link">
+        <span class="icon icon-left"></span>
+        Button
+      </button>
+    </div>
+
+{% highlight html %}
+<button class="btn">
+  <span class="icon icon-search"></span>
+  Button
+</button>
+<button class="btn btn-primary">
+  <span class="icon icon-search"></span>
+  Button
+</button>
+<button class="btn btn-positive">
+  <span class="icon icon-search"></span>
+  Button
+</button>
+<button class="btn btn-negative">
+  <span class="icon icon-search"></span>
+  Button
+</button>
+<button class="btn btn-link">
+  <span class="icon icon-left"></span>
+  Button
+</button>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component" id="buttonsBadges">
+    <h3 class="component-title">带数字的按钮</h3>
+
+    <div class="component-example">
+      <button class="btn">Badge button <span class="badge">1</span></button>
+      <button class="btn btn-primary">Badge button <span class="badge badge-primary">1</span></button>
+      <button class="btn btn-positive">Badge button <span class="badge badge-positive">1</span></button>
+      <button class="btn btn-negative">Badge button <span class="badge badge-negative">1</span></button>
+    </div>
+
+{% highlight html %}
+<button class="btn">Badge button <span class="badge">1</span></button>
+<button class="btn btn-primary">Badge button <span class="badge badge-primary">1</span></button>
+<button class="btn btn-positive">Badge button <span class="badge badge-positive">1</span></button>
+<button class="btn btn-negative">Badge button <span class="badge badge-negative">1</span></button>
+
+<button class="btn btn-outlined">Badge button <span class="badge badge-inverted">1</span></button>
+<button class="btn btn-outlined btn-primary">Badge button <span class="badge badge-primary badge-inverted">1</span></button>
+<button class="btn btn-outlined btn-positive">Badge button <span class="badge badge-positive badge-inverted">1</span></button>
+<button class="btn btn-outlined btn-negative">Badge button <span class="badge badge-negative badge-inverted">1</span></button>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component" id="blockButtons">
+    <h3 class="component-title">大按钮</h3>
+
+    <div class="component-example">
+      <button class="btn btn-block">Block button</button>
+      <button class="btn btn-primary btn-block">Block button</button>
+      <button class="btn btn-positive btn-block">Block button</button>
+      <button class="btn btn-negative btn-block">Block button</button>
+
+      <button class="btn btn-block btn-outlined">Block button</button>
+      <button class="btn btn-primary btn-block btn-outlined">Block button</button>
+      <button class="btn btn-positive btn-block btn-outlined">Block button</button>
+      <button class="btn btn-negative btn-block btn-outlined">Block button</button>
+    </div>
+
+{% highlight html %}
+<button class="btn btn-block">Block button</button>
+<button class="btn btn-primary btn-block">Block button</button>
+<button class="btn btn-positive btn-block">Block button</button>
+<button class="btn btn-negative btn-block">Block button</button>
+
+<button class="btn btn-block btn-outlined">Block button</button>
+<button class="btn btn-primary btn-block btn-outlined">Block button</button>
+<button class="btn btn-positive btn-block btn-outlined">Block button</button>
+<button class="btn btn-negative btn-block btn-outlined">Block button</button>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Badges -->
+  <article class="component" id="badges">
+    <h3 class="component-title">数字图标</h3>
+    <p class="component-description">Badges come in four flavors and should be used to indicate "how many" of something there are. Adding the a class of <code>.badge-inverted</code> will remove the badges background color.</p>
+
+    <div class="component-example">
+      <span class="badge">1</span>
+      <span class="badge badge-primary">2</span>
+      <span class="badge badge-positive">3</span>
+      <span class="badge badge-negative">4</span>
+      <span class="badge badge-inverted">1</span>
+      <span class="badge badge-primary badge-inverted">2</span>
+      <span class="badge badge-positive badge-inverted">3</span>
+      <span class="badge badge-negative badge-inverted">4</span>
+    </div>
+
+{% highlight html %}
+<span class="badge">1</span>
+<span class="badge badge-primary">2</span>
+<span class="badge badge-positive">3</span>
+<span class="badge badge-negative">4</span>
+
+<span class="badge badge-inverted">1</span>
+<span class="badge badge-primary badge-inverted">2</span>
+<span class="badge badge-positive badge-inverted">3</span>
+<span class="badge badge-negative badge-inverted">4</span>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Forms -->
+  <article class="component" id="forms">
+    <h3 class="component-title">表单</h3>
+
+    <div class="component-example">
+      <form class="input-group">
+        <div class="input-row full-width">
+          <input type="text" placeholder="填写标题（最多20个字）">
+        </div>
+        <div class="input-row auto-height">
+          <textarea id="desc" type="text" placeholder="填写描述（描述优惠券的使用说明、规则或要求，最多1000字）"></textarea>
+        </div>
+      </form>
+    </div>
+
+{% highlight html %}
+<form class="input-group">
+  <div class="input-row full-width">
+    <input type="text" placeholder="填写标题（最多20个字）">
+  </div>
+  <div class="input-row auto-height">
+    <textarea id="desc" type="text" placeholder="填写描述（描述优惠券的使用说明、规则或要求，最多1000字）"></textarea>
+  </div>
+</form>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Form with input group -->
+  <article class="component" id="formsWithInputGroup">
+    <h3 class="component-title">详情表单</h3>
+
+    <div class="component-example component-example-fullbleed">
+      <form class="input-group">
+        <div class="input-row">
+          <label>Full name</label>
+          <input type="text" placeholder="Mister Ratchet">
+        </div>
+        <div class="input-row">
+          <label>Email</label>
+          <input type="email" placeholder="ratchetframework@gmail.com">
+        </div>
+        <div class="input-row">
+          <label>Url</label>
+          <input type="url" placeholder="http://www.taobao.com">
+        </div>
+        <div class="input-row">
+          <label>Username</label>
+          <input type="text" placeholder="goRatchet">
+        </div>
+        <div class="input-row">
+          <label>Password</label>
+          <input type="password" placeholder="you password">
+        </div>
+        <div class="input-row">
+          <label>Phone</label>
+          <input type="tel" placeholder="13800138000">
+        </div>
+        <div class="input-row">
+          <label>Gender</label>
+          <select>
+            <option>male</option>
+            <option>female</option>
+          </select>
+        </div>
+        <div class="input-row">
+          <label>Birth date</label>
+          <input type="date" placeholder="Birth day" value="2014-04-30">
+        </div>
+        <div class="input-row">
+          <label>Date time</label>
+          <input type="datetime-local" placeholder="Birth day">
+        </div>
+        <div class="input-row">
+          <label>Switch</label>
+          <input class="label-switch switch-anim" type="checkbox">
+        </div>
+        <div class="input-row">
+          <label>Slider</label>
+          <div class="range-slider">
+            <input type="range" min="0" max="100" value="50" step="0.1">
+          </div>
+        </div>
+        <div class="input-row">
+          <label>Checkbox</label>
+          <input class="label-checkbox" type="checkbox" checked="checked">活动频道
+        </div>
+      </form>
+    </div>
+
+{% highlight html %}
+<form class="input-group">
+  <div class="input-row">
+    <label>Full name</label>
+    <input type="text" placeholder="Mister Ratchet">
+  </div>
+  <div class="input-row">
+    <label>Email</label>
+    <input type="email" placeholder="ratchetframework@gmail.com">
+  </div>
+  <div class="input-row">
+    <label>Url</label>
+    <input type="url" placeholder="http://www.taobao.com">
+  </div>
+  <div class="input-row">
+    <label>Username</label>
+    <input type="text" placeholder="goRatchet">
+  </div>
+  <div class="input-row">
+    <label>Password</label>
+    <input type="password" placeholder="you password">
+  </div>
+  <div class="input-row">
+    <label>Phone</label>
+    <input type="tel" placeholder="13800138000">
+  </div>
+  <div class="input-row">
+    <label>Gender</label>
+    <select>
+      <option>male</option>
+      <option>female</option>
+    </select>
+  </div>
+  <div class="input-row">
+    <label>Birth date</label>
+    <input type="date" placeholder="Birth day" value="2014-04-30">
+  </div>
+  <div class="input-row">
+    <label>Date time</label>
+    <input type="datetime-local" placeholder="Birth day">
+  </div>
+  <div class="input-row">
+    <label>Switch</label>
+    <input class="label-switch switch-anim" type="checkbox">
+  </div>
+  <div class="input-row">
+    <label>Slider</label>
+    <div class="range-slider">
+      <input type="range" min="0" max="100" value="50" step="0.1">
+    </div>
+  </div>
+  <div class="input-row">
+    <label>Checkbox</label>
+    <input class="label-checkbox" type="checkbox" checked="checked">活动频道
+  </div>
+</form>
+{% endhighlight %}
+
+  </article>
+
+    <!-- Ratchicons -->
+    <article class="component no-border" id="ratchicons">
+      <h3 class="component-title">字体iconfont</h3>
+      <p class="component-description">Use Ratchicons in your application to help inform interactions.</p>
+
+      <div class="component-example">
+        <div class="content-padded">
+          <span class="icon icon-back"></span>
+          <span class="icon icon-bars"></span>
+          <span class="icon icon-caret"></span>
+          <span class="icon icon-check"></span>
+          <span class="icon icon-close"></span>
+          <span class="icon icon-compose"></span>
+          <span class="icon icon-download"></span>
+          <span class="icon icon-edit"></span>
+          <span class="icon icon-forward"></span>
+          <span class="icon icon-gear"></span>
+          <span class="icon icon-home"></span>
+          <span class="icon icon-info"></span>
+          <span class="icon icon-list"></span>
+          <span class="icon icon-more-vertical"></span>
+          <span class="icon icon-more"></span>
+          <span class="icon icon-pages"></span>
+          <span class="icon icon-person"></span>
+          <span class="icon icon-play"></span>
+          <span class="icon icon-plus"></span>
+          <span class="icon icon-refresh"></span>
+          <span class="icon icon-search"></span>
+          <span class="icon icon-star-filled"></span>
+          <span class="icon icon-star"></span>
+          <span class="icon icon-trash"></span>
+          <span class="icon icon-up-nav"></span>
+          <span class="icon icon-up"></span>
+          <span class="icon icon-right-nav"></span>
+          <span class="icon icon-right"></span>
+          <span class="icon icon-down-nav"></span>
+          <span class="icon icon-down"></span>
+          <span class="icon icon-left-nav"></span>
+          <span class="icon icon-left"></span>
+        </div>
+      </div>
+
+{% highlight html %}
+<div class="content-padded">
+  <span class="icon icon-back"></span>
+  <span class="icon icon-bars"></span>
+  <span class="icon icon-caret"></span>
+  <span class="icon icon-check"></span>
+  <span class="icon icon-close"></span>
+  <span class="icon icon-compose"></span>
+  <span class="icon icon-download"></span>
+  <span class="icon icon-edit"></span>
+  <span class="icon icon-forward"></span>
+  <span class="icon icon-gear"></span>
+  <span class="icon icon-home"></span>
+  <span class="icon icon-info"></span>
+  <span class="icon icon-list"></span>
+  <span class="icon icon-more-vertical"></span>
+  <span class="icon icon-more"></span>
+  <span class="icon icon-pages"></span>
+  <span class="icon icon-person"></span>
+  <span class="icon icon-play"></span>
+  <span class="icon icon-plus"></span>
+  <span class="icon icon-refresh"></span>
+  <span class="icon icon-search"></span>
+  <span class="icon icon-star-filled"></span>
+  <span class="icon icon-star"></span>
+  <span class="icon icon-trash"></span>
+  <span class="icon icon-up-nav"></span>
+  <span class="icon icon-up"></span>
+  <span class="icon icon-right-nav"></span>
+  <span class="icon icon-right"></span>
+  <span class="icon icon-down-nav"></span>
+  <span class="icon icon-down"></span>
+  <span class="icon icon-left-nav"></span>
+  <span class="icon icon-left"></span>
+</div>
+{% endhighlight %}
+
+    </article>
+
+      <!-- Footer -->
+      {% include footer.html %}
+    </div>
+  </div>
+</div>

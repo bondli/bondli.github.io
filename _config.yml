@@ -10,6 +10,5 @@ highlighter:  rouge
 permalink:    pretty
 
 # Server
-source:       admix-ui-docs
 port:         4000
 url:          http://bondli.github.io

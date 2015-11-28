@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>快速开始--admix</title>
+<meta name="description" content="admix-ui: Build mobile apps with simple HTML, CSS, and JS components.">
+<meta name="author" content="bondli">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Google Web Fonts -->
+<link rel="stylesheet" href="//g.alicdn.com/o2o/admix/0.1.0/admix.css?v=20151101">
+<link rel="stylesheet" href="/assets/css/docs.css">
+<style>
+@media only screen and (min-width: 640px){
+    html {
+        font-size: 20px!important;
+    }
+}
+</style>
+  </head>
+  <body ontouchstart="">
+    <!--[if lt IE 9]>
+  <div class="bs-callout bs-callout-danger">
+    <h4>Attention!</h4>
+    <p>
+      Looks like your current browser is old and doesn't support many features used in this page.
+      Please take a second to <a href="http://browsehappy.com/">upgrade to a more modern browser</a>.
+    </p>
+  </div>
+<![endif]-->
+
+    <div class="docs-sub-header">
+  <header class="docs-masthead clearfix">
+  <div class="container">
+    <div class="column">
+      <h1 class="docs-title">
+        <a href="/" data-ignore="push">admix</a>
+      </h1>
+      <nav class="docs-nav clearfix">
+        <a class="docs-nav-trigger icon icon-bars pull-right js-docs-nav-trigger" href="#"></a>
+        <div class="docs-nav-group">
+          <a class="docs-nav-item" href="/" data-ignore="push">首页</a>
+          <a class="docs-nav-item" href="/getting-started" data-ignore="push">快速开始</a>
+          <a class="docs-nav-item" href="/components" data-ignore="push">CSS组件</a>
+          <a class="docs-nav-item" href="/examples" data-ignore="push">JS组件</a>
+          <a class="docs-nav-item" href="/about" data-ignore="push">关于</a>
+          <a class="docs-nav-item" href="https://github.com/bondli/admix" data-ignore="push">GitHub project</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="docs-sub-content">
+      <h2 class="page-title">快速开始</h2>
+      <p class="page-description">无需下载，无需安装，只需3个命令.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="column-group">
+    <div class="column docs-content">
+      <div class="docs-section">
+        <h2>快速开始</h2>
+        <p class="lead">3个命令搭建一个H5项目.</p>
+
+        <h3>1. 安装系统必备</h3>
+        <p><code>sudo npm install -g yo grunt-cli bower</code>(前提是安装了node.js)</p>
+
+        <h3>2. 安装脚手架</h3>
+        <p><code>sudo npm install -g generator-admix</code></p>
+
+        <h3>3. 建立项目</h3>
+        <p><code>yo admix</code>(需要自己先创建项目目录，然后进入该目录执行命令)</p>
+      </div>
+
+      <div class="docs-section">
+        <h2>新建的项目中包含了什么？</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">project_name/
+├── app/
+│   ├── bower_components/
+│   ├── mods/
+│   └── pages/
+├── build/
+├── htmls/
+└── htmls-dist/</code></pre></figure>
+
+      </div>
+
+
+
+      <div class="docs-section">
+
+        <h3>新建页面</h3>
+        <p><code>yo admix:page xxx</code> 你将在htmls目录中发现多了一个xxx.html，同时在app/pages/下面多了一个xxx的目录</p>
+
+        <h3>新建模块</h3>
+        <p><code>yo admix:mods xxx</code> 你将在app/mods/目录下发现多了一个xxx.js，这个是整个项目可以共用的模块，如果要在某个页面下建立模块，可以在前面的命令基础上增加：空格+页面名称.</p>
+
+        <h3>启动项目</h3>
+        <p><code>grunt</code> 你将看到浏览器自动为你打开了项目，你点击页面进入即可.</p>
+
+        <h3>项目打包</h3>
+        <p><code>grunt build</code> 打包后即可提交gitlab.</p>
+      </div>
+
+
+    </div>
+
+    <div class="column lg-units-4">
+    </div>
+  </div>
+
+  <div class="column">
+    <!-- Footer -->
+    <div class="docs-footer">
+  <ul class="docs-footer-links">
+    <li>Currently v0.1.0</li>
+    <li></li>
+    <li><a href="https://github.com/bondli/admix/issues" data-ignore="push">Issues</a></li>
+    <li></li>
+    <li><a href="https://github.com/bondli/admix/releases" data-ignore="push">Releases</a></li>
+  </ul>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//g.alicdn.com/o2o/admix/0.1.0/admix-outer.js?v=20151101" crossorigin></script>
+<script src="/assets/js/docs.min.js"></script>
+
+  </div>
+</div>
+
+  </body>
+</html>
