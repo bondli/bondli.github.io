@@ -11,6 +11,5 @@ permalink:    pretty
 
 # Server
 source:       admix-ui-docs
-destination:  admix-ui
 port:         4000
 url:          http://bondli.github.io
